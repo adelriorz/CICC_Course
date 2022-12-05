@@ -1,0 +1,79 @@
+#background {
+    background-color: #14213d;
+    font-family: "Roboto", sans-serif;
+    text-align: center;
+    width: 30%;
+    border: red; /*DEBUG*/
+    border-style: double; /*DEBUG*/
+}
+
+.black-text{
+    color: black;
+}
+
+.form-group {
+    display: block;
+}
+
+.form-wrap {
+    color: grey;
+    background-color: white;
+    font-family: "Roboto", sans-serif;
+    text-align: center;
+    padding-left: 4vw, 4vw, 4vw, 4vw;
+    margin-bottom: 2vw;
+    margin-top: 2vw;
+    margin-left: 2vw;
+    margin-right: 2vw;
+    display: block;
+    border: greenyellow; /*DEBUG*/
+    border-style: double; /*DEBUG*/
+}
+
+h1 {
+    color: black;
+    text-align: center;
+    font-size: x-large;
+}
+
+p {
+    text-align: center;
+}
+
+input[type=text], input[type=password], input[type=email] {
+    border: 1px bold grey;
+    border-radius: 3px;
+    width: 80%;
+    margin-bottom: 1vw;
+    vertical-align: top;
+}
+
+input {
+    vertical-align: top;
+}
+
+button {
+    background-color: #142639;
+    color: white;
+    width: 80%;
+    border: black;
+    border: 2px outset #142639;
+    border-radius: 3px;
+}
+
+.bottom-text {
+    font-size: 10px;
+    padding-left: 3vh;
+    padding-right: 3vh;
+    margin-left: 2vh;
+    margin-right: 2vh;
+}
+
+a {
+  text-decoration: none;  
+}
+
+footer {
+    color: white;
+    font-size: small;
+}
