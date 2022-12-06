@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display Property</title>
+    <style>
+
+        * {
+            margin: 0;
+        }
+
+        /* 
+            Display property 
+
+            - inline (default)
+            - inline-block
+            - block (div, section, ul, p h1-h6)
+            - flex
+            - grid
+            - none
+            - table
+        */
+
+
+
+        /* ul{
+            display: inline-block;
+            background-color: beige;
+            width: 100px;
+            height: 200px;
+        } */
+
+        li {
+            display: inline;
+            background-color: deepskyblue;
+        }
+
+        img {
+            display: block;
+            border: 1px solid black;
+        }
+
+        .box {
+            display: inline-block;
+            background-color: #f4f4f4;
+            width: 30%;
+            padding: 10px;
+            margin-bottom: 15px;
+        }
+
+        #box-2 {
+            display: none;
+            /* visibility: hidden; */
+        }
+
+    </style>
+</head>
+<body>
+  <ul>
+    <li>List 1</li>
+    <li>List 2</li>
+    <li>List 3</li>
+  </ul>
+
+  <br>
+  <br>
+
+  <img src="./img/leaf.png" alt="">
+  <img src="./img/leaf.png" alt="">
+
+  <br>
+  <br>
+
+    <div id="box-1" class="box">
+        <h3>Heading 1</h3>
+        <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nemo,
+        blanditiis eum deserunt saepe, mollitia aliquam pariatur cum
+        cupiditate voluptates eos, minima quasi! Minus labore a fuga nostrum
+        magnam dicta repudiandae!
+        </p>
+    </div>
+    <div id="box-2" class="box">
+        <h3>Heading 2</h3>
+        <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nemo,
+        blanditiis eum deserunt saepe, mollitia aliquam pariatur cum
+        cupiditate voluptates eos, minima quasi! Minus labore a fuga nostrum
+        magnam dicta repudiandae!
+        </p>
+    </div>
+  
+    <div id="box-3" class="box">
+      <h3>Heading 3</h3>
+      <p>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nemo,
+          blanditiis eum deserunt saepe, mollitia aliquam pariatur cum
+          cupiditate voluptates eos, minima quasi! Minus labore a fuga nostrum
+          magnam dicta repudiandae!
+        </p>
+    </div>
+    <div id="box-4" class="box">
+        <h3>Heading 4</h3>
+        <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nemo,
+        blanditiis eum deserunt saepe, mollitia aliquam pariatur cum
+        cupiditate voluptates eos, minima quasi! Minus labore a fuga nostrum
+        magnam dicta repudiandae!
+        </p>
+    </div>
+
+  </div>
+</body>
+</html>
