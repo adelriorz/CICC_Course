@@ -74,11 +74,17 @@ h1{
     -webkit-box-shadow: -2px -1px 25px -4px rgba(0,0,0,0.75);
     -moz-box-shadow: -2px -1px 25px -4px, rgba(0,0,0,0.75);
 }
-
-.contact a{
+.contact{
+    background-image: linear-gradient(to right, #6a994e , white);
+}
+.contact h6{
+    font-weight: 600;
+}
+.contact a, p{
     text-decoration: none;
     color: black;
+    font-weight: 400;
 }
-.textarea{
+textarea{
     resize: none;
 }
