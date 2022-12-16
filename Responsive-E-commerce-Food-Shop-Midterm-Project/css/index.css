@@ -41,7 +41,7 @@
     border-radius: 60px;
 }
 .main{
-    background: url(/Responsive-E-commerce-Food-Shop-Midterm-Project/img/lunchcopy.jpg) no-repeat;
+    background: url(/);
     background-size: cover;
     height: 100vh;
     background-position: 50% 50%;
@@ -73,9 +73,6 @@ h1{
     box-shadow: -2px -1px 25px -4px rgba(0,0,0,0.75);
     -webkit-box-shadow: -2px -1px 25px -4px rgba(0,0,0,0.75);
     -moz-box-shadow: -2px -1px 25px -4px, rgba(0,0,0,0.75);
-}
-.contact{
-    background-image: linear-gradient(to right, #6a994e , white);
 }
 .contact h6{
     font-weight: 600;
