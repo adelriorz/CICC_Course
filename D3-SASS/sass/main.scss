@@ -1,0 +1,19 @@
+/*
+npm i -g npm //updates node
+npm i sass //Installs sass
+
+"scripts": { // For adding a short command to type in terminal. We would run 'npm run compile:sass' 
+    "compile:sass": "sass sass/main.scss css/main.css -w" //w stands for 'watch' whenever a change is done it will reflect 
+*/
+
+body{
+    background-color: black;
+    color: white;
+    font-size: 60px;
+    padding: 50px;
+    
+    header{
+        font-size: 100px;
+        color: green;
+    }
+}
