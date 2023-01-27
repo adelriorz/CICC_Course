@@ -1,28 +1,22 @@
 /* JavaScript DOM Exercises 01 */
-
 /*
   Exercise 01
   -----------
   Highlight all of the words over 8 characters long in the paragraph text (with a yellow background for example)
 */
+const paragraph = document.querySelector('p');
+paragraph.innerHTML = paragraph.textContent.split(" ").map(word => {
+  return (word.length > 8 ? `<mark>${word}</mark>` : word)
+}).join(" ");
 
-window.onload = function() {
-  const check = word => {
-    if (word.length > 8) {
-      return '<span class="hightlight">' + word + '</span>'
-    } else {
-      return word
-    }
+/* // In a simpler way
+paragraph.innerHTML = paragraph.textContent.split(" ").map(word => {
+  if(word.length > 8){
+    return `<mark>${word}</mark>`;
   }
-
-  const sample = document.querySelector("#sample")
-  sample.innerHTML = sample
-    .innerText
-    .trim()
-    .split(' ')
-    .map(check)
-    .join(' ')
-}
+  return word;
+}).join(" ");
+*/
 
 /*
   Exercise 02
@@ -30,18 +24,11 @@ window.onload = function() {
   Add a link back to the source of the text after the paragraph tag.
   (http://officeipsum.com/)
 */
-var temp_link = document.createElement("a");
-temp_link.href = "http://officeipsum.com/";
-temp_link.target = '_blank';
-temp_link.innerHTML = "link";
 
-
-var par = document.createElement("p");
-par.innerHTML = "some text: ";
-par.appendChild(temp_link);
-
-document.getElementById("main_div").appendChild(par);
-
+const link = document.createElement("a");
+link.href = "http://officeipsum.com/";
+link.innerText = "Link to office ipsum";
+document.body.appendChild(link); // We don't have control where to put it.
 
 /*
   Exercise 03
@@ -50,7 +37,7 @@ document.getElementById("main_div").appendChild(par);
   A sentence can be assumed to be a string of text terminated with a period (.)
 */
 
-
+paragraph.innerHTML = paragraph.innerHTML.split(".").join(".</p><p>");
 
 /* 
   Exercise 04
@@ -59,9 +46,15 @@ document.getElementById("main_div").appendChild(par);
   You can assume that all words are separated by one singular whitespace.
 */
 
+const wordCount = paragraph.innerText.split(" ").length; // Backslash n won't be included.
+const wordCountEl = document.createElement("div");
+wordCountEl.innerText = `${wordCount} words`;
+document.body.insertBefore(wordCountEl, paragraph);
 
 /*
   Exercise 05
   -----------
   Replace all question marks (?) with thinking faces (🤔) and exclamation marks (!) with astonished faces (😲) 
 */
+
+paragraph.innerHTML = paragraph.innerHTML.replaceAll("?", "? 🤔").replaceAll("!", "! 😲");
