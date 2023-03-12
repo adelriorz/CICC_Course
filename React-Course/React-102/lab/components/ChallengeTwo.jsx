@@ -10,21 +10,22 @@ const studentList = [
   'Zeddicus Doom',
 ]
 
-export default class ChallengeTwo extends Component {
-  //declare the states
+class ChallengeTwo extends Component {
   state = {
-    arr: []
+    arr: [],
   }
 
-  //componentDidMount will execute when the page has loaded (this will only run once)
   componentDidMount() {
     //display the student list after 3 seconds
+    setTimeout(() => {
+      this.setState({ arr: studentList });
+    }, 3000);
   }
 
-  //random button handler
   randomize = () => {
     //shuffle the array and set the state
-
+    const shuffled = studentList.sort(() => 0.5 - Math.random());
+    this.setState({ arr: shuffled });
   }
 
   render() {
@@ -34,10 +35,17 @@ export default class ChallengeTwo extends Component {
         <div className='msg'>
           <ul>
             {/* display the list of students by iterating through the array */}
+            {this.state.arr.map((student, index) => (
+              <li key={index}>{student}</li>
+            ))}
           </ul>
         </div>
-        <button className='btn large'>Randomize</button>
+        <button className='btn large' onClick={this.randomize}>
+          Randomize
+        </button>
       </>
     )
   }
 }
+
+export default ChallengeTwo;
