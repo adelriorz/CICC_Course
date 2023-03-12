@@ -1,36 +1,35 @@
 import React, { Component } from 'react';
-//import images
-import LookLeft from '../assets/look-left.jpeg'
-import LookRight from '../assets/look-right.jpeg'
 
 class ChallengeOne extends Component {
-  constructor(){
-    super()
-    this.btnClickHandler = this.btnClickHandler.bind(this)
-  }
-  //declare the state here
+  // declare the state object
   state = {
-    lookLeft: undefined
+    currentImage: 'look-left.jpeg' // initialize current image to 'look-left.jpeg'
   };
 
-  //click left/right button handler goes here
-  btnClickHandler(arg){
-    this.setState({ lookLeft: arg })
-  }
+  // click event handlers to change current image
+  handleClickLeft = () => {
+    this.setState({ currentImage: 'look-left.jpeg' });
+  };
+
+  handleClickRight = () => {
+    this.setState({ currentImage: 'look-right.jpeg' });
+  };
 
   render() {
+    const { currentImage } = this.state; // get the current image from state
+
     return (
       <>
         <h2>Challenge 1</h2>
         <div className="msg">
           <img
             className="ch1"
-            src={this.state.lookLeft ? LookLeft : LookRight}
+            src={require(`./${currentImage}`).default} // use current image in src attribute
             alt=""
           />
         </div>
-        <button onClick={() => this.btnClickHandler(true)} className="btn">⭠</button>
-        <button onClick={() => this.btnClickHandler(false)} className="btn">⭢</button>
+        <button className="btn" onClick={this.handleClickLeft}>⭠</button>
+        <button className="btn" onClick={this.handleClickRight}>⭢</button>
       </>
     );
   }
