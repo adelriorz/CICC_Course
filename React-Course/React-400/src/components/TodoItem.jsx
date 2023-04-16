@@ -16,4 +16,4 @@ function TodoItem({ todoItem, handleChange, deleteTodo }) {
     )
 }
 
-export default TodoItem
+export default React.memo(TodoItem);
